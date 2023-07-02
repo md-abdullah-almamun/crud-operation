@@ -4,7 +4,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 def First(request):
-    return None
+    return render(request, 'First.html')
 
-def Secound(request):
-    return None
