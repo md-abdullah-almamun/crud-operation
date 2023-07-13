@@ -1,8 +1,11 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import render
+
 
 # Create your views here.
 
 def First(request):
-    return render(request, 'First/First.html')
+    value = request.GET.get('txt')
+    print(value)
+    return render(request, 'first/First.html')
 
