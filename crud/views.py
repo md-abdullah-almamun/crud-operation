@@ -7,6 +7,6 @@ from django.shortcuts import render
 def First(request):
     value = request.POST.get('txt')
     print('your data is in value:', value)
-    a = value
+
     return render(request, 'first/First.html', locals())
 
