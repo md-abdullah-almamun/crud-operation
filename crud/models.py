@@ -30,7 +30,7 @@ class Profile(models.Model):
     Religion = models.CharField(max_length=9,choices=RELIGION)
     Gender = models.CharField(max_length=6,choices=GENDER)
 
-    def __str__(self): 
+    def __str__(self):
         return str(self.Name)
 
 
