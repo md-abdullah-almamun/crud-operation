@@ -1,10 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'first/First.html'%}
+{% block title %}Create profile{% endblock %}
+{% block body %}
+<div class="container">
+    <form>
+        <div>
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" name="Name">
+            </div>
+        </div>
+        <div>
+            <div class="mb-3">
+                <img src="" alt="">
+                <label class="form-label">Image</label>
+                <input type="file" class="form-control" aria-describedby="emailHelp" name="Image">
+            </div>
+        </div>
+        <div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="Email" class="form-control" aria-describedby="emailHelp" name="Email">
+            </div>
+        </div>
+        <div>
+            <div class="mb-3">
+                <label class="form-label">Age</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" name="Age">
+            </div>
+        </div>
+        <div>
+            <div class="mb-3">
+                <label class="form-label">Address</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" name="Address">
+            </div>
+        </div>
+        <div>
+            <div class="mb-3">
+                <label class="form-label">Phone_no</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" name="Phone No">
+            </div>
+        </div>
+        <div>
+            <div class="mb-3">
+                <label class="form-label">Date_of_birth</label>
+                <input type="datetime-local" class="form-control" aria-describedby="emailHelp" name="Date_of_birth">
+            </div>
+        </div>
+        <div>
+            <div class="mb-3">
+                <label class="from-label">Religion</label>
+                <select class="form-select" name="Religion" aria-label="Default select example">
+                    <option selected>Empaty</option>
+                    <option value="Isalm">Isalm</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Christian">Christian</option>
+                    <option value="Bouddho">Bouddho</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div class="mb-3">
+                <label class="form-label">Gender</label>
+                <select class="form-select" name="Gender" aria-label="Default select example">
+                    <option selected>Empaty</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

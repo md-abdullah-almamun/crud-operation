@@ -10,3 +10,7 @@ def First(request):
     print(user_prof)
 
     return render(request, 'first/First.html', locals())
+
+
+def Create(request):
+    return render(request, 'First/create.html', locals())
