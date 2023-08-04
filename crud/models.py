@@ -4,14 +4,14 @@ from django.db import models
 
 
 class Profile(models.Model):
-    RELIGION=(
+    Religion=(
         ('Muslim','Muslim'),
         ('Hindu','Hindu'),
         ('Christian','Christian'),
         ('Bouddho','Bouddho')
     )
 
-    GENDER=(
+    Gender=(
         ('Male','Male'),
         ('Female','Female'),
         ('Others','others')
@@ -20,18 +20,18 @@ class Profile(models.Model):
     )
 
 
-    Name = models.CharField(max_length=25,null=True,blank=True)
-    Image = models.ImageField(upload_to='Profile_pic/',default='default/def.jpg',blank=True,null=True)
+    name = models.CharField(max_length=25, null=True, blank=True)
+    image = models.ImageField(upload_to='Profile_pic/',default='default/def.jpg',blank=True,null=True)
     Email = models.EmailField(max_length=30,blank=True,null=True)
-    Age = models.PositiveIntegerField(blank=True,null=True)
-    Address = models.TextField(max_length=200,blank=True,null=True)
-    Phone_no = models.TextField(max_length=15,blank=True,null=True)
-    Date_of_birth = models.TextField(max_length=12,blank=True,null=True)
-    Religion = models.CharField(max_length=9,choices=RELIGION)
-    Gender = models.CharField(max_length=6,choices=GENDER)
+    age = models.PositiveIntegerField()
+    address = models.TextField(max_length=200,blank=True,null=True)
+    phone_no = models.TextField(max_length=15,blank=True,null=True)
+    date_of_birth = models.TextField(max_length=12,blank=True,null=True)
+    religion = models.CharField(max_length=20,choices=Religion)
+    gender = models.CharField(max_length=20,choices=Gender)
 
     def __str__(self):
-        return str(self.Name)
+        return str(self.name)
 
 
 
